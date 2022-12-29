@@ -1,0 +1,34 @@
+execute lex pgms
+
+example:
+lex scannerlex.l
+gcc lex.yy.c
+./a.out
+
+
+execute yacc pgms
+
+example:
+yacc -d yacc1.y
+lex yacc1lex.l
+cc lex.yy.c y.tab.c
+./a.out
+
+execute normal pgms
+
+--C language
+
+gcc filename.c
+./a.out
+
+--Python
+execute in python idle
+
+
+input
+1. 3 address code : (a+b)*(c+d)
+2. Intermediate code : (a+b)*(c+d)
+3. Dependency graph : 4*6+9-3
+4. First Follow : a -->b b -->cd a -->acd
+5  Arthimetic calculations : 5*6
+6. LL1 : a -->b b -->c+d a -->a-(c*d)
